@@ -1,0 +1,16 @@
+from pandas import read_csv
+import numpy
+
+#import the dataset
+dataset = read_csv("preprocess.csv",header=None)
+#QUESTION - 6
+X = dataset.iloc[:,:-1] #Retrieves all the columns except the last column
+Y = dataset.iloc[:,-1] #Retrieves only the last column
+
+print(X)
+print(Y)
+
+from sklearn.model_selection import train_test_split
+X_train,X_test,Y_train,Y_test = train_test_split(X,Y,test_size=0.2,random_state = 0)
+print(X_test)
+#38120008-AISHWARYA R
