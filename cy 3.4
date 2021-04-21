@@ -1,0 +1,12 @@
+from pandas import read_csv
+import numpy
+
+#import the dataset
+dataset = read_csv("preprocess.csv",header=None)
+
+#QUESTION - 4
+dataset.dropna(inplace=True)
+print(dataset.head(20))
+print(dataset.describe)
+print(dataset.shape)
+#38120008-AISHWARYA R
