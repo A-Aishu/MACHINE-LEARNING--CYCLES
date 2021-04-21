@@ -1,0 +1,10 @@
+from pandas import read_csv
+import numpy
+
+#import the dataset
+dataset = read_csv("preprocess.csv",header=None)
+# QUESTION - 3
+dataset[[1,2,3,4,5]]=dataset[[1,2,3,4,5]].replace(0,numpy.NaN)
+print(dataset.isnull().sum())
+print(dataset.head(20))
+#38120008-AISHWARYA R
