@@ -1,0 +1,10 @@
+from pandas import read_csv
+import numpy
+
+#import the dataset
+dataset = read_csv("preprocess.csv",header=None)
+# QUESTION - 5
+dataset.fillna(dataset.mean(),inplace= True)
+print(dataset.isnull().sum())
+print(dataset.head(20))
+#38120008-AISHWARYA R
